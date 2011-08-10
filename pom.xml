@@ -2,10 +2,12 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>org.eclipse.tesla</groupId>
   <artifactId>tesla</artifactId>
   <version>3-SNAPSHOT</version>
   <packaging>pom</packaging>
+
   <name>The Eclipse Foundation</name>
   <description>
   </description>
@@ -20,7 +22,7 @@
     <name>The Eclipse Foundation</name>
     <url>http://www.eclipse.org/</url>
   </organization>
-  <url>http://www.apache.org/</url>
+  <url>http://www.eclipse.org/</url>
 
   <distributionManagement>
     <repository>
@@ -38,14 +40,14 @@
     <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
     <distMgmtSnapshotsUrl>http://jvz.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <gpg.useagent>true</gpg.useagent>                                                                                             
+    <gpg.useagent>true</gpg.useagent>
   </properties>
   
-  <scm>                                                                                                                       
-    <connection>scm:git:git@github.com:etesla/tesla-pom.git</connection>                                                   
-    <developerConnection>scm:git:git@github.com:etesla/tesla-pom.git</developerConnection>                                 
-    <url>http://github.com/etesla/tesla-pom</url>                                                                          
-  </scm>   
+  <scm>
+    <connection>scm:git:git@github.com:etesla/tesla-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:etesla/tesla-pom.git</developerConnection>
+    <url>http://github.com/etesla/tesla-pom</url>
+  </scm>
     
   <build>
     <pluginManagement>
@@ -273,4 +275,3 @@
     <!-- END SNIPPET: release-profile -->
   </profiles>
 </project>
-
