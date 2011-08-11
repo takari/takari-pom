@@ -5,7 +5,7 @@
 
   <groupId>org.eclipse.tesla</groupId>
   <artifactId>tesla</artifactId>
-  <version>3</version>
+  <version>4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Eclipse Foundation</name>
