@@ -28,7 +28,7 @@
     <repository>
       <id>tesla.releases</id>
       <name>Tesla Releases</name>
-      <url>http://jvz.io:8081/nexus/service/local/staging/deploy/maven2</url>
+      <url>http://us3.maven.org:8081/nexus/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
       <id>tesla.snapshots</id>
@@ -38,7 +38,7 @@
   </distributionManagement>
   <properties>
     <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
-    <distMgmtSnapshotsUrl>http://jvz.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
+    <distMgmtSnapshotsUrl>http://us3.maven.org:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gpg.useagent>true</gpg.useagent>
   </properties>
