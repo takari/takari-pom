@@ -5,11 +5,12 @@
 
   <groupId>org.eclipse.tesla</groupId>
   <artifactId>tesla</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Eclipse Foundation</name>
   <description>
+    Tesla: A next generation build system.
   </description>
   <licenses>
     <license>
@@ -23,6 +24,37 @@
     <url>http://www.eclipse.org/</url>
   </organization>
   <url>http://www.eclipse.org/</url>
+
+  <developers>
+    <developer>
+      <id>jvanzyl</id>
+      <name>Jason van Zyl</name>
+      <roles>
+        <role>Project Lead</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>  
+    <developer>
+      <id>bentmann</id>
+      <name>Benjamin Bentmann</name>
+      <email>bentmann@apache.org</email>
+      <organization>Sonatype</organization>
+      <roles>
+        <role>Project Lead</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+    <developer>
+      <id>ifedorenko</id>
+      <name>Igor Fedorenko</name>
+      <email>igor@ifedorenko.com</email>
+      <organization>Sonatype</organization>
+      <roles>
+        <role>Committer</role>
+      </roles>
+      <timezone>-5</timezone>
+    </developer>
+  </developers>
 
   <distributionManagement>
     <repository>
