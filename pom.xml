@@ -3,14 +3,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.eclipse.tesla</groupId>
+  <groupId>io.tesla</groupId>
   <artifactId>tesla</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
-
-  <name>The Eclipse Foundation</name>
   <description>
-    Tesla: A next generation build system.
+    Tesla: A next generation build framework.
   </description>
   <licenses>
     <license>
@@ -19,11 +17,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  <organization>
-    <name>The Eclipse Foundation</name>
-    <url>http://www.eclipse.org/</url>
-  </organization>
-  <url>http://www.eclipse.org/</url>
 
   <developers>
     <developer>
