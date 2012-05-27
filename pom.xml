@@ -51,7 +51,7 @@
     <repository>
       <id>tesla.releases</id>
       <name>Tesla Releases</name>
-      <url>http://tesla.repository.io:8081/nexus/service/local/staging/deploy/maven2</url>
+      <url>http://repository.tesla.io:8081/nexus/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
       <id>tesla.snapshots</id>
@@ -61,7 +61,7 @@
   </distributionManagement>
   <properties>
     <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
-    <distMgmtSnapshotsUrl>http://tesla.repository.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
+    <distMgmtSnapshotsUrl>http://repository.tesla.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gpg.useagent>true</gpg.useagent>
   </properties>
