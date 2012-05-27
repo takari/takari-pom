@@ -64,7 +64,6 @@
     <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
     <distMgmtSnapshotsUrl>http://repository.tesla.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <gpg.useagent>true</gpg.useagent>
   </properties>
   
   <scm>
