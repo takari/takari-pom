@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.tesla</groupId>
   <artifactId>tesla</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>4</version>
   <packaging>pom</packaging>
   <description>Tesla: A next generation development infrastructure framework.</description>
   <licenses>
