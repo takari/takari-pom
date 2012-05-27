@@ -7,9 +7,7 @@
   <artifactId>tesla</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>
-    Tesla: A next generation build framework.
-  </description>
+  <description>Tesla: A next generation development infrastructure framework.</description>
   <licenses>
     <license>
       <name>The Eclipse Public License, Version 1.0</name>
@@ -53,7 +51,7 @@
     <repository>
       <id>tesla.releases</id>
       <name>Tesla Releases</name>
-      <url>http://us3.maven.org:8081/nexus/service/local/staging/deploy/maven2</url>
+      <url>http://tesla.repository.io:8081/nexus/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
       <id>tesla.snapshots</id>
@@ -63,7 +61,7 @@
   </distributionManagement>
   <properties>
     <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
-    <distMgmtSnapshotsUrl>http://us3.maven.org:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
+    <distMgmtSnapshotsUrl>http://tesla.repository.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <gpg.useagent>true</gpg.useagent>
   </properties>
