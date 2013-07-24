@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.tesla</groupId>
   <artifactId>tesla</artifactId>
-  <version>5-SNAPSHOT</version>
+  <version>5</version>
   <packaging>pom</packaging>
   <name>Tesla</name>
   <url>http://tesla.io</url>
