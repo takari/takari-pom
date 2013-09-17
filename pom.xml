@@ -67,9 +67,9 @@
   </properties>
   
   <scm>
-    <connection>scm:git:git@github.com:etesla/tesla-pom.git</connection>
-    <developerConnection>scm:git:git@github.com:etesla/tesla-pom.git</developerConnection>
-    <url>http://github.com/etesla/tesla-pom</url>
+    <connection>scm:git:git@github.com:tesla/tesla-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:tesla/tesla-pom.git</developerConnection>
+    <url>http://github.com/tesla/tesla-pom</url>
   </scm>
     
   <build>
