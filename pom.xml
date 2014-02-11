@@ -11,13 +11,13 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.tesla</groupId>
-  <artifactId>tesla</artifactId>
+  <groupId>io.takari</groupId>
+  <artifactId>takari</artifactId>
   <version>8-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Tesla</name>
-  <url>http://tesla.io</url>
-  <description>Tesla: A next generation development infrastructure framework.</description>
+  <name>Takari</name>
+  <url>http://takari.io</url>
+  <description>Tesla: The future of software delivery.</description>
   <licenses>
     <license>
       <name>The Eclipse Public License, Version 1.0</name>
@@ -36,22 +36,12 @@
       <timezone>-5</timezone>
     </developer>  
     <developer>
-      <id>bentmann</id>
-      <name>Benjamin Bentmann</name>
-      <email>bentmann@apache.org</email>
-      <organization>Sonatype</organization>
-      <roles>
-        <role>Project Lead</role>
-      </roles>
-      <timezone>+1</timezone>
-    </developer>
-    <developer>
       <id>ifedorenko</id>
       <name>Igor Fedorenko</name>
       <email>igor@ifedorenko.com</email>
       <organization>Sonatype</organization>
       <roles>
-        <role>Committer</role>
+        <role>Project Lead</role>
       </roles>
       <timezone>-5</timezone>
     </developer>
@@ -59,26 +49,26 @@
 
   <distributionManagement>
     <repository>
-      <id>tesla.releases</id>
-      <name>Tesla Releases</name>
-      <url>http://repository.tesla.io:8081/nexus/service/local/staging/deploy/maven2</url>
+      <id>takari.releases</id>
+      <name>Takari Releases</name>
+      <url>http://repository.takari.io:8081/nexus/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>tesla.snapshots</id>
+      <id>takari.snapshots</id>
       <name>${distMgmtSnapshotsName}</name>
       <url>${distMgmtSnapshotsUrl}</url>
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <distMgmtSnapshotsName>Tesla Snapshots</distMgmtSnapshotsName>
-    <distMgmtSnapshotsUrl>http://repository.tesla.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
+    <distMgmtSnapshotsName>Takari Snapshots</distMgmtSnapshotsName>
+    <distMgmtSnapshotsUrl>http://repository.takari.io:8081/nexus/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
   <scm>
-    <connection>scm:git:git@github.com:tesla/tesla-pom.git</connection>
-    <developerConnection>scm:git:git@github.com:tesla/tesla-pom.git</developerConnection>
-    <url>http://github.com/tesla/tesla-pom</url>
+    <connection>scm:git:git@github.com:takari/takari-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:takari/takari-pom.git</developerConnection>
+    <url>http://github.com/takari/takari-pom</url>
   </scm>
     
   <build>
@@ -290,7 +280,7 @@
   <profiles>
     <!-- START SNIPPET: release-profile -->
     <profile>
-      <id>tesla-release</id>
+      <id>takari-release</id>
       <build>
         <plugins>
           <!-- We want to sign the artifact, the POM, and all attached artifacts -->
