@@ -13,7 +13,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.takari</groupId>
   <artifactId>takari</artifactId>
-  <version>9</version>
+  <version>10-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Takari</name>
   <url>http://takari.io</url>
