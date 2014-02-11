@@ -17,7 +17,7 @@
   <packaging>pom</packaging>
   <name>Takari</name>
   <url>http://takari.io</url>
-  <description>Tesla: The future of software delivery.</description>
+  <description>Takari: The future of software delivery.</description>
   <licenses>
     <license>
       <name>The Eclipse Public License, Version 1.0</name>
@@ -162,7 +162,7 @@
             <pushChanges>false</pushChanges>
             <useReleaseProfile>false</useReleaseProfile>
             <goals>deploy</goals>
-            <arguments>-Ptesla-release</arguments>
+            <arguments>-Ptakari-release</arguments>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
