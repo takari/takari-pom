@@ -51,7 +51,7 @@
     <repository>
       <id>takari.releases</id>
       <name>Takari Releases</name>
-      <url>http://repository.takari.io:8081/nexus/service/local/staging/deploy/maven2</url>
+      <url>http://otto.takari.io:8081/nexus/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
       <id>takari.snapshots</id>
