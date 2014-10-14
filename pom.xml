@@ -60,11 +60,11 @@
     </snapshotRepository>
   </distributionManagement>
   <properties>
-    <repoHost>http://otto.takari.io:8081</repoHost>
+    <repoHost>https://otto.takari.io</repoHost>
     <releaseName>Takari Releases</releaseName>
-    <releaseUrl>${repoHost}/nexus/service/local/staging/deploy/maven2</releaseUrl>
+    <releaseUrl>${repoHost}/service/local/staging/deploy/maven2</releaseUrl>
     <snapshotName>Takari Snapshots</snapshotName>
-    <snapshotUrl>${repoHost}/nexus/content/repositories/snapshots</snapshotUrl>
+    <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
