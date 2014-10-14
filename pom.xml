@@ -75,8 +75,36 @@
   </scm>
     
   <build>
-    <pluginManagement>
+    <pluginManagement>    
       <plugins>
+        <!-- We use Sisu and Plexus metadata frequently in Takari projects so the defaults are defined here -->
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>sisu-maven-plugin</artifactId>
+          <version>1.1</version>
+          <executions>
+            <execution>
+              <id>generate-index</id>
+              <goals>
+                <goal>main-index</goal>
+                <goal>test-index</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.plexus</groupId>
+          <artifactId>plexus-component-metadata</artifactId>
+          <version>1.5.5</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>generate-metadata</goal>
+                <goal>generate-test-metadata</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>      
         <!-- set versions of common plugins for reproducibility, ordered alphabetically -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
