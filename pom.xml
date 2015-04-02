@@ -13,7 +13,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.takari</groupId>
   <artifactId>takari</artifactId>
-  <version>15</version>
+  <version>16-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Takari</name>
   <url>http://takari.io</url>
@@ -85,32 +85,18 @@
     </plugins>
     <pluginManagement>
       <plugins>
-        <!-- We use Sisu and Plexus metadata frequently in Takari projects so the defaults are defined here -->
-        <plugin>
-          <groupId>org.eclipse.sisu</groupId>
-          <artifactId>sisu-maven-plugin</artifactId>
-          <version>0.3.0.M1</version>
-          <executions>
-            <execution>
-              <id>generate-index</id>
-              <goals>
-                <goal>main-index</goal>
-                <goal>test-index</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
         <!-- set versions/configuration of common plugins for reproducibility, ordered alphabetically -->
         <plugin>
           <groupId>io.takari.maven.plugins</groupId>
           <artifactId>takari-lifecycle-plugin</artifactId>
-          <version>1.9.2</version>
+          <version>1.11.3</version>
           <configuration>
             <!-- compile/testCompile -->
             <source>1.7</source>
             <compilerId>jdt</compilerId>
             <transitiveDependencyReference>error</transitiveDependencyReference>
             <privatePackageReference>error</privatePackageReference>
+            <proc>none</proc>
 
             <!-- jar -->
             <sourceJar>true</sourceJar>
@@ -176,11 +162,6 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-invoker-plugin</artifactId>
-          <version>1.9</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>2.5</version>
           <configuration>
@@ -192,16 +173,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.10.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.3</version>
-          <configuration>
-            <packagingTypes>
-              <packaging>takari-maven-plugin</packaging>
-            </packagingTypes>
-          </configuration>
         </plugin>
         <!-- START SNIPPET: release-plugin-configuration -->
         <plugin>
