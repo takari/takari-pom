@@ -65,6 +65,7 @@
     <snapshotName>Takari Snapshots</snapshotName>
     <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <takariLifecycleVersion>1.11.9</takariLifecycleVersion>
   </properties>
 
   <scm>
@@ -88,7 +89,7 @@
         <plugin>
           <groupId>io.takari.maven.plugins</groupId>
           <artifactId>takari-lifecycle-plugin</artifactId>
-          <version>1.11.4</version>
+          <version>${takariLifecycleVersion}</version>
           <configuration>
             <!-- compile/testCompile -->
             <source>1.7</source>
