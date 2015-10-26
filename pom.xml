@@ -66,6 +66,7 @@
     <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <takariLifecycleVersion>1.11.9</takariLifecycleVersion>
+    <javaSourceVersion>1.7</javaSourceVersion>
   </properties>
 
   <scm>
@@ -92,7 +93,7 @@
           <version>${takariLifecycleVersion}</version>
           <configuration>
             <!-- compile/testCompile -->
-            <source>1.7</source>
+            <source>${javaSourceVersion}</source>
             <compilerId>jdt</compilerId>
             <transitiveDependencyReference>error</transitiveDependencyReference>
             <privatePackageReference>error</privatePackageReference>
