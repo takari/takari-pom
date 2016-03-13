@@ -66,7 +66,11 @@
     <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <takariLifecycleVersion>1.11.9</takariLifecycleVersion>
-    <javaSourceVersion>1.7</javaSourceVersion>
+    <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
+    <takari.javaSourceVersion>1.7</takari.javaSourceVersion>
+    <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
+    <!-- Use new format but leave old property as not to break anyone -->
+    <takari.lifecycleVersion>1.11.9</takari.lifecycleVersion>    
   </properties>
 
   <scm>
@@ -98,7 +102,6 @@
             <transitiveDependencyReference>error</transitiveDependencyReference>
             <privatePackageReference>error</privatePackageReference>
             <proc>none</proc>
-
             <!-- jar -->
             <sourceJar>true</sourceJar>
           </configuration>
@@ -258,7 +261,7 @@
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
-            <header>http://takari.io/support/license-header.txt</header>
+            <header>${licenseHeader}</header>
             <useDefaultExcludes>false</useDefaultExcludes>
             <includes>
               <include>**/pom.xml</include>
