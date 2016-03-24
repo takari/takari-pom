@@ -70,7 +70,13 @@
     <takari.javaSourceVersion>1.7</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>1.11.9</takari.lifecycleVersion>    
+    <takari.lifecycleVersion>1.11.12</takari.lifecycleVersion> 
+    <takari.sourceJar>true</takari.sourceJar>   
+    <takari.testJar>false</takari.testJar>
+    <takari.compilerId>jdt</takari.compilerId>
+    <takari.annotationProcessing>none</takari.annotationProcessing>
+    <takari.transitiveDependencyReference>error</takari.transitiveDependencyReference>
+    <takari.privatePackageReference>error</takari.privatePackageReference>
   </properties>
 
   <scm>
@@ -97,13 +103,14 @@
           <version>${takariLifecycleVersion}</version>
           <configuration>
             <!-- compile/testCompile -->
-            <source>${javaSourceVersion}</source>
-            <compilerId>jdt</compilerId>
-            <transitiveDependencyReference>error</transitiveDependencyReference>
-            <privatePackageReference>error</privatePackageReference>
-            <proc>none</proc>
+            <source>${takari.javaSourceVersion}</source>
+            <compilerId>${takari.compilerId}</compilerId>
+            <transitiveDependencyReference>${takari.transitiveDependencyReference}</transitiveDependencyReference>
+            <privatePackageReference>${takari.privatePackageReference}</privatePackageReference>
+            <proc>${takari.annotationProcessing}</proc>
             <!-- jar -->
-            <sourceJar>true</sourceJar>
+            <sourceJar>${takari.sourceJar}</sourceJar>
+            <testJar>${takari.testJar}</testJar>
           </configuration>
         </plugin>
         <plugin>
