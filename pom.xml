@@ -268,7 +268,7 @@
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
-            <header>${licenseHeader}</header>
+            <header>${takari.licenseHeader}</header>
             <useDefaultExcludes>false</useDefaultExcludes>
             <includes>
               <include>**/pom.xml</include>
