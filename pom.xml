@@ -56,18 +56,17 @@
     </repository>
 
     <snapshotRepository>
-      <id>takari.snapshots</id>
+      <id>sonatype.snapshots</id>
       <name>${snapshotName}</name>
       <url>${snapshotUrl}</url>
     </snapshotRepository>
   </distributionManagement>
 
   <properties>
-    <repoHost>https://otto.takari.io</repoHost>
     <releaseName>Sonatype Releases</releaseName>
     <releaseUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</releaseUrl>
-    <snapshotName>Takari Snapshots</snapshotName>
-    <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
+    <snapshotName>Sonatype Snapshots</snapshotName>
+    <snapshotUrl>https://oss.sonatype.org/content/repositories/snapshots</snapshotUrl>
 
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
