@@ -50,7 +50,7 @@
 
   <distributionManagement>
     <repository>
-      <id>takari.releases</id>
+      <id>sonatype.releases</id>
       <name>${releaseName}</name>
       <url>${releaseUrl}</url>
     </repository>
@@ -64,8 +64,8 @@
 
   <properties>
     <repoHost>https://otto.takari.io</repoHost>
-    <releaseName>Takari Releases</releaseName>
-    <releaseUrl>${repoHost}/service/local/staging/deploy/maven2</releaseUrl>
+    <releaseName>Sonatype Releases</releaseName>
+    <releaseUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</releaseUrl>
     <snapshotName>Takari Snapshots</snapshotName>
     <snapshotUrl>${repoHost}/content/repositories/snapshots</snapshotUrl>
 
