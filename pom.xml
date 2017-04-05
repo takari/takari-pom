@@ -45,6 +45,15 @@
       </roles>
       <timezone>-5</timezone>
     </developer>
+    <developer>
+      <id>mmoser</id>
+      <name>Manfred Moser</name>
+      <email>manfred@simpligility.com</email>
+      <roles>
+        <role>Contributor</role>
+      </roles>
+      <timezone>-8</timezone>
+    </developer>
   </developers>
 
   <distributionManagement>
