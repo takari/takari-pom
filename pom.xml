@@ -93,7 +93,7 @@
     <takari.transitiveDependencyReference>error</takari.transitiveDependencyReference>
     <takari.privatePackageReference>error</takari.privatePackageReference>
 
-    <surefire.version>2.19.1</surefire.version>
+    <surefire.version>2.20</surefire.version>
   </properties>
 
   <scm>
