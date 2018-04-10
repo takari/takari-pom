@@ -50,7 +50,7 @@
       <name>Manfred Moser</name>
       <email>manfred@simpligility.com</email>
       <roles>
-        <role>Contributor</role>
+        <role>Project Lead</role>
       </roles>
       <timezone>-8</timezone>
     </developer>
@@ -80,12 +80,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <takariLifecycleVersion>1.12.4</takariLifecycleVersion>
+    <takariLifecycleVersion>1.13.4</takariLifecycleVersion>
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
-    <takari.javaSourceVersion>1.7</takari.javaSourceVersion>
+    <takari.javaSourceVersion>1.8</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>1.11.12</takari.lifecycleVersion> 
+    <takari.lifecycleVersion>1.13.4</takari.lifecycleVersion>
     <takari.sourceJar>true</takari.sourceJar>   
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
