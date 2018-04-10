@@ -93,7 +93,7 @@
     <takari.transitiveDependencyReference>error</takari.transitiveDependencyReference>
     <takari.privatePackageReference>error</takari.privatePackageReference>
 
-    <surefire.version>2.20</surefire.version>
+    <surefire.version>2.21.0</surefire.version>
   </properties>
 
   <scm>
@@ -138,7 +138,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -148,7 +148,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.1</version>
+          <version>3.7.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -196,7 +196,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.1.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -239,7 +239,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.6</version>
+          <version>3.7</version>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.wagon</groupId>
