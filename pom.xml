@@ -94,6 +94,10 @@
     <takari.privatePackageReference>error</takari.privatePackageReference>
 
     <surefire.version>2.21.0</surefire.version>
+
+    <!-- To make project Idea friendly -->
+    <maven.compiler.source>${takari.javaSourceVersion}</maven.compiler.source>
+    <maven.compiler.target>${takari.javaSourceVersion}</maven.compiler.target>
   </properties>
 
   <scm>
