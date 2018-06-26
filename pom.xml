@@ -85,7 +85,7 @@
     <takari.javaSourceVersion>1.8</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>1.13.4</takari.lifecycleVersion>
+    <takari.lifecycleVersion>1.13.5</takari.lifecycleVersion>
     <takari.sourceJar>true</takari.sourceJar>   
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
