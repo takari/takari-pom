@@ -93,7 +93,7 @@
     <takari.transitiveDependencyReference>error</takari.transitiveDependencyReference>
     <takari.privatePackageReference>error</takari.privatePackageReference>
 
-    <surefire.version>2.21.0</surefire.version>
+    <surefire.version>2.22.0</surefire.version>
 
     <!-- To make project Idea friendly -->
     <maven.compiler.source>${takari.javaSourceVersion}</maven.compiler.source>
