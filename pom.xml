@@ -80,13 +80,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <takariLifecycleVersion>1.13.5</takariLifecycleVersion>
+    <takariLifecycleVersion>1.13.7</takariLifecycleVersion>
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
     <takari.javaSourceVersion>1.8</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>1.13.5</takari.lifecycleVersion>
-    <takari.sourceJar>true</takari.sourceJar>   
+    <takari.lifecycleVersion>1.13.7</takari.lifecycleVersion>
+    <takari.sourceJar>true</takari.sourceJar>
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
     <takari.annotationProcessing>none</takari.annotationProcessing>
@@ -327,7 +327,7 @@
               <mdo>XML_STYLE</mdo>
             </mapping>
           </configuration>
-        </plugin>   
+        </plugin>
         <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
