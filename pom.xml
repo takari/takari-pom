@@ -13,7 +13,7 @@
 
   <groupId>io.takari</groupId>
   <artifactId>takari</artifactId>
-  <version>28-SNAPSHOT</version>
+  <version>29-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Takari</name>
   <url>http://takari.io</url>
@@ -80,7 +80,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <takariLifecycleVersion>1.13.7</takariLifecycleVersion>
+    <takariLifecycleVersion>1.13.10-SNAPSHOT</takariLifecycleVersion>
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
     <takari.javaSourceVersion>1.8</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
