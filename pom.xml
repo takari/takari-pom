@@ -96,7 +96,7 @@
     <!-- Release -->
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
-    <surefire.version>2.22.0</surefire.version>
+    <surefire.version>2.22.2</surefire.version>
 
     <!-- To make project Idea friendly -->
     <maven.compiler.source>${takari.javaSourceVersion}</maven.compiler.source>
@@ -140,12 +140,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.8</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -155,7 +155,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
+          <version>3.8.1</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -179,7 +179,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M2</version>
+          <version>3.0.0-M3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -203,7 +203,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -227,12 +227,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-remote-resources-plugin</artifactId>
-          <version>1.5</version>
+          <version>1.7.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -241,7 +241,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
-          <version>1.9.5</version>
+          <version>1.11.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
