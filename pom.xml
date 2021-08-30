@@ -85,7 +85,7 @@
     <takari.javaSourceVersion>11</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>2.0.0</takari.lifecycleVersion>
+    <takari.lifecycleVersion>2.0.1-SNAPSHOT</takari.lifecycleVersion>
     <takari.sourceJar>true</takari.sourceJar>
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
@@ -368,16 +368,18 @@
         <plugins>
           <!-- We want to sign the artifact, the POM, and all attached artifacts -->
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
+            <groupId>io.takari.maven.plugins</groupId>
+            <artifactId>takari-lifecycle-plugin</artifactId>
             <configuration>
-              <skip>${takari.release.gpg.skip}</skip>
-              <passphrase>${gpg.passphrase}</passphrase>
+              <signArtifact>
+                <skip>${takari.release.gpg.skip}</skip>
+                <passphrase>${gpg.passphrase}</passphrase>
+              </signArtifact>
             </configuration>
             <executions>
               <execution>
                 <goals>
-                  <goal>sign</goal>
+                  <goal>signArtifact</goal>
                 </goals>
               </execution>
             </executions>
