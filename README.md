@@ -48,4 +48,5 @@ mvn clean install
 
 ## Release
 
-Same as for usage of the project... 
+Same as for usage of the project...
+
