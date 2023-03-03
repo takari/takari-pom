@@ -84,7 +84,7 @@
     <takari.javaSourceVersion>11</takari.javaSourceVersion>
     <takari.licenseHeader>http://takari.io/support/license-header.txt</takari.licenseHeader>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>2.0.9</takari.lifecycleVersion>
+    <takari.lifecycleVersion>2.1.0</takari.lifecycleVersion>
     <takari.sourceJar>true</takari.sourceJar>
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
@@ -95,7 +95,7 @@
     <!-- Release -->
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
-    <surefire.version>3.0.0-M7</surefire.version>
+    <surefire.version>3.0.0-M8</surefire.version>
 
     <!-- To make project Idea friendly (release used, rest left for sanity) -->
     <maven.compiler.release>${takari.javaSourceVersion}</maven.compiler.release>
@@ -184,7 +184,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -198,7 +198,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -213,7 +213,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>3.1.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -265,12 +265,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>4.0.0-M3</version>
+          <version>4.0.0-M4</version>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.wagon</groupId>
               <artifactId>wagon-ssh</artifactId>
-              <version>3.5.2</version>
+              <version>3.5.3</version>
             </dependency>
           </dependencies>
         </plugin>
