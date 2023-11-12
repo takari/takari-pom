@@ -95,7 +95,7 @@
     <!-- Release -->
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
-    <surefire.version>3.1.2</surefire.version>
+    <surefire.version>3.2.2</surefire.version>
 
     <!-- To make project Idea friendly (release used, rest left for sanity) -->
     <maven.compiler.release>${takari.javaSourceVersion}</maven.compiler.release>
@@ -169,7 +169,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.3.1</version>
+          <version>3.3.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -192,13 +192,8 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-docck-plugin</artifactId>
-          <version>1.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.4.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -265,7 +260,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>4.0.0-M9</version>
+          <version>3.12.1</version>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.wagon</groupId>
@@ -291,7 +286,7 @@
         <plugin>
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>4.2</version>
+          <version>4.3</version>
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
