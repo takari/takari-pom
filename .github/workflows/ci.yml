@@ -9,4 +9,4 @@ jobs:
     name: Verify
     uses: takari/takari-gh-actions/.github/workflows/ci.yml@v2
     with:
-      jdk-matrix: '[ 8 ]' # for POM one JDK is enough
+      jdk-matrix: '[ 11 ]' # for POM one JDK is enough
