@@ -376,6 +376,9 @@
             </goals>
             <configuration>
               <rules>
+                <requireJavaVersion>
+                  <version>[11,)</version>
+                </requireJavaVersion>
                 <requireMavenVersion>
                   <version>[3.6.3,)</version>
                 </requireMavenVersion>
