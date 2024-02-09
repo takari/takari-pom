@@ -2,11 +2,13 @@ name: Verify
 
 on:
   push:
+    branches:
+      - master
   pull_request:
 
 jobs:
   build:
     name: Verify
-    uses: takari/takari-gh-actions/.github/workflows/ci.yml@v2
+    uses: takari/takari-gh-actions/.github/workflows/ci.yml@v3
     with:
-      jdk-matrix: '[ 8 ]' # for POM one JDK is enough
+      jdk-matrix: '[ 11 ]' # for POM one JDK is enough

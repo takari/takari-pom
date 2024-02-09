@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2014 Takari, Inc.
+    Copyright (c) 2016 Takari, Inc.
     All rights reserved. This program and the accompanying materials
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
@@ -16,8 +16,8 @@
   <version>53-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Takari</name>
-  <url>http://takari.io</url>
   <description>Takari: The future of software delivery.</description>
+  <url>http://takari.io</url>
 
   <licenses>
     <license>
@@ -55,6 +55,13 @@
       <timezone>-8</timezone>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:takari/takari-pom.git</connection>
+    <developerConnection>scm:git:git@github.com:takari/takari-pom.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>http://github.com/takari/takari-pom</url>
+  </scm>
 
   <distributionManagement>
     <repository>
@@ -103,40 +110,7 @@
     <maven.compiler.target>${takari.javaSourceVersion}</maven.compiler.target>
   </properties>
 
-  <scm>
-    <connection>scm:git:git@github.com:takari/takari-pom.git</connection>
-    <developerConnection>scm:git:git@github.com:takari/takari-pom.git</developerConnection>
-    <url>http://github.com/takari/takari-pom</url>
-    <tag>HEAD</tag>
-  </scm>
-
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-maven</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>[3.6.3,)</version>
-                </requireMavenVersion>
-              </rules>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>io.takari.maven.plugins</groupId>
-        <artifactId>takari-lifecycle-plugin</artifactId>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
     <pluginManagement>
       <plugins>
         <!-- set versions/configuration of common plugins for reproducibility, ordered alphabetically -->
@@ -290,39 +264,76 @@
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
-            <header>${takari.licenseHeader}</header>
             <useDefaultExcludes>false</useDefaultExcludes>
-            <includes>
-              <include>**/pom.xml</include>
-              <include>**/*.xml</include>
-              <include>**/*.xsd</include>
-              <include>**/*.xjb</include>
-              <include>**/*.mdo</include>
-              <include>**/*.properties</include>
-              <include>**/*.java</include>
-              <include>**/*.groovy</include>
-              <include>**/*.scala</include>
-              <include>**/*.aj</include>
-              <include>**/*.js</include>
-              <include>**/*.css</include>
-            </includes>
-            <excludes>
-              <exclude>**/target/**</exclude>
-              <exclude>**/conf/**</exclude>
-              <exclude>**/.*</exclude>
-              <exclude>**/pkg/**</exclude>
-              <exclude>**/.idea/**</exclude>
-              <exclude>**/release.properties</exclude>
-              <exclude>**/pom.xml.releaseBackup</exclude>
-              <exclude>release.sh</exclude>
-              <exclude>**/src/test/**</exclude>
-            </excludes>
+            <licenseSets>
+              <licenseSet>
+                <header>${takari.licenseHeader}</header>
+                <includes>
+                  <include>**/pom.xml</include>
+                  <include>**/*.xml</include>
+                  <include>**/*.xsd</include>
+                  <include>**/*.xjb</include>
+                  <include>**/*.mdo</include>
+                  <include>**/*.properties</include>
+                  <include>**/*.java</include>
+                  <include>**/*.groovy</include>
+                  <include>**/*.scala</include>
+                  <include>**/*.aj</include>
+                  <include>**/*.js</include>
+                  <include>**/*.css</include>
+                </includes>
+                <excludes>
+                  <exclude>.mvn/wrapper/**</exclude>
+                  <exclude>**/target/**</exclude>
+                  <exclude>**/conf/**</exclude>
+                  <exclude>**/.*</exclude>
+                  <exclude>**/pkg/**</exclude>
+                  <exclude>**/.idea/**</exclude>
+                  <exclude>**/release.properties</exclude>
+                  <exclude>**/pom.xml.releaseBackup</exclude>
+                  <exclude>release.sh</exclude>
+                  <exclude>**/src/test/**</exclude>
+                </excludes>
+              </licenseSet>
+            </licenseSets>
             <mapping>
               <scala>JAVADOC_STYLE</scala>
               <xjb>XML_STYLE</xjb>
               <mdo>XML_STYLE</mdo>
             </mapping>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>2.43.0</version>
+          <configuration>
+            <java>
+              <!-- orders of used formatters are important MPOM-376 -->
+              <!-- eg. palantir override importOrder, so should be first -->
+              <palantirJavaFormat />
+              <removeUnusedImports />
+              <importOrder />
+            </java>
+            <pom>
+              <sortPom>
+                <expandEmptyElements>false</expandEmptyElements>
+                <!-- https://issues.apache.org/jira/browse/MRELEASE-1111 -->
+                <spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
+              </sortPom>
+            </pom>
+            <upToDateChecking>
+              <enabled>true</enabled>
+            </upToDateChecking>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>${spotless.action}</goal>
+              </goals>
+              <phase>process-sources</phase>
+            </execution>
+          </executions>
         </plugin>
         <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
@@ -351,9 +362,64 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>[11,)</version>
+                </requireJavaVersion>
+                <requireMavenVersion>
+                  <version>[3.6.3,)</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>io.takari.maven.plugins</groupId>
+        <artifactId>takari-lifecycle-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 
   <profiles>
+    <profile>
+      <id>format-check</id>
+      <activation>
+        <property>
+          <name>!format</name>
+        </property>
+      </activation>
+      <properties>
+        <spotless.action>check</spotless.action>
+      </properties>
+    </profile>
+    <profile>
+      <id>format</id>
+      <activation>
+        <property>
+          <name>format</name>
+        </property>
+      </activation>
+      <properties>
+        <spotless.action>apply</spotless.action>
+      </properties>
+    </profile>
     <!-- START SNIPPET: release-profile -->
     <profile>
       <id>takari-release</id>
