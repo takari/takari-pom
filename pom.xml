@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2014 Takari, Inc.
+    Copyright (c) 2016 Takari, Inc.
     All rights reserved. This program and the accompanying materials
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
@@ -264,33 +264,38 @@
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
-            <header>${takari.licenseHeader}</header>
             <useDefaultExcludes>false</useDefaultExcludes>
-            <includes>
-              <include>**/pom.xml</include>
-              <include>**/*.xml</include>
-              <include>**/*.xsd</include>
-              <include>**/*.xjb</include>
-              <include>**/*.mdo</include>
-              <include>**/*.properties</include>
-              <include>**/*.java</include>
-              <include>**/*.groovy</include>
-              <include>**/*.scala</include>
-              <include>**/*.aj</include>
-              <include>**/*.js</include>
-              <include>**/*.css</include>
-            </includes>
-            <excludes>
-              <exclude>**/target/**</exclude>
-              <exclude>**/conf/**</exclude>
-              <exclude>**/.*</exclude>
-              <exclude>**/pkg/**</exclude>
-              <exclude>**/.idea/**</exclude>
-              <exclude>**/release.properties</exclude>
-              <exclude>**/pom.xml.releaseBackup</exclude>
-              <exclude>release.sh</exclude>
-              <exclude>**/src/test/**</exclude>
-            </excludes>
+            <licenseSets>
+              <licenseSet>
+                <header>${takari.licenseHeader}</header>
+                <includes>
+                  <include>**/pom.xml</include>
+                  <include>**/*.xml</include>
+                  <include>**/*.xsd</include>
+                  <include>**/*.xjb</include>
+                  <include>**/*.mdo</include>
+                  <include>**/*.properties</include>
+                  <include>**/*.java</include>
+                  <include>**/*.groovy</include>
+                  <include>**/*.scala</include>
+                  <include>**/*.aj</include>
+                  <include>**/*.js</include>
+                  <include>**/*.css</include>
+                </includes>
+                <excludes>
+                  <exclude>.mvn/wrapper/**</exclude>
+                  <exclude>**/target/**</exclude>
+                  <exclude>**/conf/**</exclude>
+                  <exclude>**/.*</exclude>
+                  <exclude>**/pkg/**</exclude>
+                  <exclude>**/.idea/**</exclude>
+                  <exclude>**/release.properties</exclude>
+                  <exclude>**/pom.xml.releaseBackup</exclude>
+                  <exclude>release.sh</exclude>
+                  <exclude>**/src/test/**</exclude>
+                </excludes>
+              </licenseSet>
+            </licenseSets>
             <mapping>
               <scala>JAVADOC_STYLE</scala>
               <xjb>XML_STYLE</xjb>
