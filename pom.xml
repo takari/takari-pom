@@ -283,7 +283,7 @@
                   <include>**/*.css</include>
                 </includes>
                 <excludes>
-                  <exclude>.mvn/wrapper/**</exclude>
+                  <exclude>.mvn/**</exclude>
                   <exclude>**/target/**</exclude>
                   <exclude>**/conf/**</exclude>
                   <exclude>**/.*</exclude>
