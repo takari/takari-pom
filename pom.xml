@@ -8,7 +8,7 @@
     https://www.eclipse.org/legal/epl-v10.html
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.takari</groupId>
@@ -23,7 +23,7 @@
   <licenses>
     <license>
       <name>The Eclipse Public License, Version 1.0</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <url>https://www.eclipse.org/legal/epl-v10.html</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -61,7 +61,7 @@
     <connection>scm:git:git@github.com:takari/takari-pom.git</connection>
     <developerConnection>scm:git:git@github.com:takari/takari-pom.git</developerConnection>
     <tag>HEAD</tag>
-    <url>http://github.com/takari/takari-pom</url>
+    <url>https://github.com/takari/takari-pom</url>
   </scm>
 
   <distributionManagement>
