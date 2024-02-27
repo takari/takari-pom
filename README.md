@@ -11,7 +11,7 @@ Just add a parent segment with the latest version to your project
   <parent>
     <groupId>io.takari</groupId>
     <artifactId>takari</artifactId>
-    <version>51</version>
+    <version>53</version>
   </parent>
 ```
 
