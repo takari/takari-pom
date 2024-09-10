@@ -156,7 +156,6 @@
               <goals>
                 <goal>modernizer</goal>
               </goals>
-              <phase>process-sources</phase>
             </execution>
           </executions>
         </plugin>
