@@ -93,7 +93,7 @@
     <takari.licenseHeader>https://raw.githubusercontent.com/takari/takari-pom/master/license-header-epl1.txt</takari.licenseHeader>
     <takari.licenseYear>${project.inceptionYear}-2024</takari.licenseYear>
     <!-- Use new format but leave old property as not to break anyone -->
-    <takari.lifecycleVersion>2.1.8</takari.lifecycleVersion>
+    <takari.lifecycleVersion>2.2.0</takari.lifecycleVersion>
     <takari.sourceJar>true</takari.sourceJar>
     <takari.testJar>false</takari.testJar>
     <takari.compilerId>jdt</takari.compilerId>
