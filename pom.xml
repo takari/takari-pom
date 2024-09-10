@@ -66,13 +66,13 @@
 
   <distributionManagement>
     <repository>
-      <id>sonatype.releases</id>
+      <id>takari.releases</id>
       <name>${releaseName}</name>
       <url>${releaseUrl}</url>
     </repository>
 
     <snapshotRepository>
-      <id>sonatype.snapshots</id>
+      <id>takari.snapshots</id>
       <name>${snapshotName}</name>
       <url>${snapshotUrl}</url>
     </snapshotRepository>
