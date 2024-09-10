@@ -1,5 +1,10 @@
 # Takari POM
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.takari/takari.svg?label=Maven%20Central)](https://search.maven.org/artifact/io.takari/takari)
+[![Verify](https://github.com/takari/takari-pom/actions/workflows/ci.yml/badge.svg)](https://github.com/takari/takari-pom/actions/workflows/ci.yml)
+[![Reproducible Builds](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jvm-repo-rebuild/reproducible-central/master/content/io/takari/takari/badge.json)](https://github.com/jvm-repo-rebuild/reproducible-central/blob/master/content/io/takari/takari-pom/README.md)
+
+
 The parent POM for all projects of Takari allowing deployment to the Central
 Repository and centralized plugin and configuration management.
 
