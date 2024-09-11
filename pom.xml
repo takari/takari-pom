@@ -237,7 +237,7 @@
             <useReleaseProfile>false</useReleaseProfile>
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <goals>deploy</goals>
-            <arguments>--batch-mode -Ptakari-release</arguments>
+            <arguments>-Ptakari-release</arguments>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
