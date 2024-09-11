@@ -13,7 +13,7 @@
 
   <groupId>io.takari</groupId>
   <artifactId>takari</artifactId>
-  <version>62-SNAPSHOT</version>
+  <version>62</version>
   <packaging>pom</packaging>
   <name>Takari</name>
   <description>Takari: The future of software delivery.</description>
@@ -60,7 +60,7 @@
   <scm>
     <connection>scm:git:git@github.com:takari/takari-pom.git</connection>
     <developerConnection>scm:git:git@github.com:takari/takari-pom.git</developerConnection>
-    <tag>takari-61</tag>
+    <tag>takari-62</tag>
     <url>https://github.com/takari/takari-pom</url>
   </scm>
 
