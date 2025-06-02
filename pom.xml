@@ -71,9 +71,9 @@
       <url>https://repo.maven.apache.org/maven2/</url>
     </repository>
     <snapshotRepository>
-      <id>sonatype-central-portal</id>
-      <name>Sonatype Central Portal</name>
-      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+      <id>${takariDistMgmtSnapshotsId}</id>
+      <name>${takariDistMgmtSnapshotsName}</name>
+      <url>${takariDistMgmtSnapshotsUrl}</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -81,6 +81,11 @@
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- This is setup for SNAPSHOTs enabled on Portal namespace -->
+    <takariDistMgmtSnapshotsId>sonatype-central-portal</takariDistMgmtSnapshotsId>
+    <takariDistMgmtSnapshotsName>Sonatype Central Snapshots</takariDistMgmtSnapshotsName>
+    <takariDistMgmtSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots</takariDistMgmtSnapshotsUrl>
 
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
     <takari.javaSourceVersion>11</takari.javaSourceVersion>
@@ -103,6 +108,12 @@
     <surefire.version>3.5.3</surefire.version>
     <modernizer.version>3.1.0</modernizer.version>
     <njord.version>0.7.1</njord.version>
+
+    <!-- njord configuration -->
+    <njord.autoPublish>true</njord.autoPublish>
+    <jord.publishingType>automatic</jord.publishingType>
+    <njord.waitForStates>true</njord.waitForStates>
+    <njord.enabled>false</njord.enabled>
 
     <!-- To make project Idea friendly (release used, rest left for sanity) -->
     <maven.compiler.release>${takari.javaSourceVersion}</maven.compiler.release>
@@ -468,6 +479,10 @@
     <!-- START SNIPPET: release-profile -->
     <profile>
       <id>takari-release</id>
+      <properties>
+        <!-- use njord during release -->
+        <njord.enabled>true</njord.enabled>
+      </properties>
       <build>
         <plugins>
           <!-- We want to sign the artifact, the POM, and all attached artifacts -->
