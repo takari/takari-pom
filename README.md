@@ -18,6 +18,8 @@ Also, the user `settings.xml` must contain the properly filled in [release-setti
 snippets. User has to generate publishing tokens on Portal and replace them in the
 XML snippet above.
 
+To check your publishing status/setup, use `mvn njord:status -Dnjord.enabled`.
+
 ## Usage
 
 Just add a parent segment with the latest version to your project
