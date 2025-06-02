@@ -15,7 +15,8 @@ This parent uses Takari Lifecycle and has the following **build time requirement
 Note: user doing the publishing must have set up the namespace and have access to
 target namespace, as documented on [Central Portal](https://central.sonatype.org/register/central-portal/).
 Also, the user `settings.xml` must contain the properly filled in [release-settings-template.xml](.mvn/release-settings-template.xml)
-snippets.
+snippets. User has to generate publishing tokens on Portal and replace them in the
+XML snippet above.
 
 ## Usage
 
