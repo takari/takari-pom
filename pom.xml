@@ -85,7 +85,7 @@
     <!-- This is setup for SNAPSHOTs enabled on Portal namespace -->
     <takariDistMgmtSnapshotsId>sonatype-central-portal</takariDistMgmtSnapshotsId>
     <takariDistMgmtSnapshotsName>Sonatype Central Snapshots</takariDistMgmtSnapshotsName>
-    <takariDistMgmtSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots</takariDistMgmtSnapshotsUrl>
+    <takariDistMgmtSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots/</takariDistMgmtSnapshotsUrl>
 
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
     <takari.javaSourceVersion>11</takari.javaSourceVersion>
@@ -492,6 +492,7 @@
             <configuration>
               <skip>${takari.release.gpg.skip}</skip>
               <bestPractices>true</bestPractices>
+              <useAgent>true</useAgent>
             </configuration>
             <executions>
               <execution>
