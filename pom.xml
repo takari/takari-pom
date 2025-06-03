@@ -66,30 +66,31 @@
 
   <distributionManagement>
     <repository>
-      <id>takari.releases</id>
-      <name>${releaseName}</name>
-      <url>${releaseUrl}</url>
+      <id>sonatype-central-portal</id>
+      <name>Sonatype Central Portal</name>
+      <url>https://repo.maven.apache.org/maven2/</url>
     </repository>
-
     <snapshotRepository>
-      <id>takari.snapshots</id>
-      <name>${snapshotName}</name>
-      <url>${snapshotUrl}</url>
+      <id>${takariDistMgmtSnapshotsId}</id>
+      <name>${takariDistMgmtSnapshotsName}</name>
+      <url>${takariDistMgmtSnapshotsUrl}</url>
     </snapshotRepository>
   </distributionManagement>
 
   <properties>
-    <releaseName>Sonatype Releases</releaseName>
-    <releaseUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</releaseUrl>
-    <snapshotName>Sonatype Snapshots</snapshotName>
-    <snapshotUrl>https://oss.sonatype.org/content/repositories/snapshots</snapshotUrl>
-
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <!-- This is setup for SNAPSHOTs enabled on Portal namespace -->
+    <takariDistMgmtSnapshotsId>sonatype-central-portal</takariDistMgmtSnapshotsId>
+    <takariDistMgmtSnapshotsName>Sonatype Central Snapshots</takariDistMgmtSnapshotsName>
+    <takariDistMgmtSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots/</takariDistMgmtSnapshotsUrl>
+
     <!-- Properties that control how plugins we define are used. All prefixed with "takari." -->
     <takari.javaSourceVersion>11</takari.javaSourceVersion>
+    <takari.buildTimeJavaVersion>[17,)</takari.buildTimeJavaVersion>
+    <takari.buildTimeMavenVersion>[3.9,)</takari.buildTimeMavenVersion>
     <takari.licenseHeader>https://raw.githubusercontent.com/takari/takari-pom/master/license-header-epl1.txt</takari.licenseHeader>
     <takari.licenseYear>${project.inceptionYear}-2024</takari.licenseYear>
     <!-- Use new format but leave old property as not to break anyone -->
@@ -106,6 +107,13 @@
 
     <surefire.version>3.5.3</surefire.version>
     <modernizer.version>3.1.0</modernizer.version>
+    <njord.version>0.7.1</njord.version>
+
+    <!-- njord configuration -->
+    <njord.autoPublish>true</njord.autoPublish>
+    <njord.publishingType>automatic</njord.publishingType>
+    <njord.waitForStates>true</njord.waitForStates>
+    <njord.enabled>false</njord.enabled>
 
     <!-- To make project Idea friendly (release used, rest left for sanity) -->
     <maven.compiler.release>${takari.javaSourceVersion}</maven.compiler.release>
@@ -158,6 +166,11 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>eu.maveniverse.maven.plugins</groupId>
+          <artifactId>njord</artifactId>
+          <version>${njord.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -287,6 +300,11 @@
           <version>${surefire.version}</version>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+        <plugin>
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
           <version>5.0.0</version>
@@ -407,10 +425,10 @@
             <configuration>
               <rules>
                 <requireJavaVersion>
-                  <version>[11,)</version>
+                  <version>${takari.buildTimeJavaVersion}</version>
                 </requireJavaVersion>
                 <requireMavenVersion>
-                  <version>[3.6.3,)</version>
+                  <version>${takari.buildTimeMavenVersion}</version>
                 </requireMavenVersion>
               </rules>
             </configuration>
@@ -431,6 +449,13 @@
         <artifactId>modernizer-maven-plugin</artifactId>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>eu.maveniverse.maven.njord</groupId>
+        <artifactId>extension</artifactId>
+        <version>${njord.version}</version>
+      </extension>
+    </extensions>
   </build>
 
   <profiles>
@@ -459,6 +484,10 @@
     <!-- START SNIPPET: release-profile -->
     <profile>
       <id>takari-release</id>
+      <properties>
+        <!-- use njord during release -->
+        <njord.enabled>true</njord.enabled>
+      </properties>
       <build>
         <plugins>
           <!-- We want to sign the artifact, the POM, and all attached artifacts -->
@@ -467,6 +496,8 @@
             <artifactId>maven-gpg-plugin</artifactId>
             <configuration>
               <skip>${takari.release.gpg.skip}</skip>
+              <bestPractices>true</bestPractices>
+              <useAgent>true</useAgent>
             </configuration>
             <executions>
               <execution>
@@ -479,6 +510,13 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <skip>true</skip>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
               <skip>true</skip>
             </configuration>
