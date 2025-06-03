@@ -55,6 +55,10 @@ The project uses the
 [Takari Lifecycle](http://takari.io/book/40-lifecycle.html) for resources,
 compiler, jar, install and deploy replacement. 
 
+**Important:** The Takari Lifecycle `deployAtEnd` feature must not be used
+while releasing. As Njord performs local staging, there is no sense for it,
+but may cause publishing issues as well.
+
 ## Build
 
 As usual
