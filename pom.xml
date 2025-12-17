@@ -105,7 +105,7 @@
     <!-- Release -->
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
-    <surefire.version>3.5.3</surefire.version>
+    <surefire.version>3.5.4</surefire.version>
     <modernizer.version>3.1.0</modernizer.version>
     <njord.version>0.7.5</njord.version>
 
