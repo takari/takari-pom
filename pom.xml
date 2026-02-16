@@ -361,7 +361,9 @@
             <java>
               <!-- orders of used formatters are important MPOM-376 -->
               <!-- eg. palantir override importOrder, so should be first -->
-              <palantirJavaFormat />
+              <palantirJavaFormat>
+                <version>2.87.0</version>
+              </palantirJavaFormat>
               <removeUnusedImports />
               <importOrder />
             </java>
@@ -376,14 +378,6 @@
               <enabled>true</enabled>
             </upToDateChecking>
           </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>${spotless.action}</goal>
-              </goals>
-              <phase>process-sources</phase>
-            </execution>
-          </executions>
         </plugin>
         <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
         <plugin>
@@ -441,10 +435,6 @@
         <extensions>true</extensions>
       </plugin>
       <plugin>
-        <groupId>com.diffplug.spotless</groupId>
-        <artifactId>spotless-maven-plugin</artifactId>
-      </plugin>
-      <plugin>
         <groupId>org.gaul</groupId>
         <artifactId>modernizer-maven-plugin</artifactId>
       </plugin>
@@ -460,26 +450,54 @@
 
   <profiles>
     <profile>
-      <id>format-check</id>
+      <id>spotless-check</id>
       <activation>
         <property>
-          <name>!format</name>
+          <name>env.CI</name>
         </property>
       </activation>
-      <properties>
-        <spotless.action>check</spotless.action>
-      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>spotless-check</id>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+                <phase>process-sources</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
     <profile>
-      <id>format</id>
+      <id>spotless-apply</id>
       <activation>
         <property>
-          <name>format</name>
+          <name>!env.CI</name>
         </property>
       </activation>
-      <properties>
-        <spotless.action>apply</spotless.action>
-      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.diffplug.spotless</groupId>
+            <artifactId>spotless-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>spotless-apply</id>
+                <goals>
+                  <goal>apply</goal>
+                </goals>
+                <phase>process-sources</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
     <!-- START SNIPPET: release-profile -->
     <profile>
