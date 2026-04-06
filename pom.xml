@@ -106,7 +106,7 @@
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
     <surefire.version>3.5.5</surefire.version>
-    <modernizer.version>3.2.0</modernizer.version>
+    <modernizer.version>3.3.0</modernizer.version>
     <njord.version>0.9.4</njord.version>
 
     <!-- njord configuration -->
@@ -262,7 +262,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.4.0</version>
+          <version>3.5.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -356,7 +356,7 @@
         <plugin>
           <groupId>com.diffplug.spotless</groupId>
           <artifactId>spotless-maven-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>3.4.0</version>
           <configuration>
             <java>
               <!-- orders of used formatters are important MPOM-376 -->
