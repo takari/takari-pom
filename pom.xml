@@ -107,7 +107,7 @@
 
     <surefire.version>3.5.5</surefire.version>
     <modernizer.version>3.4.0</modernizer.version>
-    <njord.version>0.9.4</njord.version>
+    <njord.version>0.9.7</njord.version>
 
     <!-- njord configuration -->
     <njord.autoPublish>true</njord.autoPublish>
