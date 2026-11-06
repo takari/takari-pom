@@ -105,9 +105,9 @@
     <!-- Release -->
     <takari.release.gpg.skip>false</takari.release.gpg.skip>
 
-    <surefire.version>3.5.6</surefire.version>
+    <surefire.version>3.6.1</surefire.version>
     <modernizer.version>3.5.0</modernizer.version>
-    <njord.version>0.9.7</njord.version>
+    <njord.version>0.10.0</njord.version>
 
     <!-- njord configuration -->
     <njord.autoPublish>true</njord.autoPublish>
@@ -190,7 +190,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.15.0</version>
+          <version>3.16.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -200,7 +200,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.4</version>
+          <version>3.2.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -209,7 +209,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.6.3</version>
+          <version>3.7.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -224,7 +224,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.4</version>
+          <version>3.2.0</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -233,7 +233,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.5.0</version>
+          <version>3.5.1</version>
           <configuration>
             <!-- disable accidental use, must use takari-lifecycle -->
             <skip>true</skip>
@@ -307,7 +307,7 @@
         <plugin>
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>5.1.1</version>
+          <version>5.1.2</version>
           <configuration>
             <aggregate>true</aggregate>
             <strictCheck>true</strictCheck>
@@ -356,7 +356,7 @@
         <plugin>
           <groupId>com.diffplug.spotless</groupId>
           <artifactId>spotless-maven-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>3.11.0</version>
           <configuration>
             <java>
               <!-- orders of used formatters are important MPOM-376 -->
